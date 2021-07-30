@@ -1,0 +1,28 @@
+.nav {
+    font-family: 'Rubik', sans-serif;
+    font-size: 2rem;
+    color: white;
+    width: 100%;
+    background-color: #FC6998;
+    display:flex;
+    justify-content: space-around;
+}
+
+.caja {
+    width: 31rem;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.caja a {
+    margin-right: 2rem;
+    text-decoration: none;
+    color: white;
+}
+
+@media(max-width: 768px){
+    .caja {
+    width: 28vh;
+    }
+}
