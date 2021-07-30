@@ -1,7 +1,6 @@
 import React from "react"
 import "./NavBar.css"
 import Icon from "../Icon/Icon"
-import ItemListContainer from "../ItemListContainer/ItemListContainer"
 
 function NavBar() {
     return (
@@ -14,7 +13,6 @@ function NavBar() {
                     <Icon/>
                 </div>
             </div>
-            <ItemListContainer greeting="Holaaa"/>
         </>
     )
 }
