@@ -1,0 +1,42 @@
+.contador {
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffe4ec;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.cantidad {
+    font-size: 1.6rem;
+    color: black;
+    border-style: hidden;
+    border-color: #ffe4ec;
+}
+
+.contenedor {
+    width: 20rem;
+}
+
+.bc {
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    width: 100%;
+    border-style:hidden;
+    border-radius: 0.5rem;
+    color:white;
+    cursor: pointer;
+    background-color: #fa8fb1;
+}
+
+.b {
+    font-size: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+    color: white;
+    border-style:hidden;
+    border-radius: 0.5rem;
+    background-color: #fa8fb1;
+    cursor: pointer;
+}
