@@ -1,12 +1,12 @@
-import ItemCount from "../ItemCount/ItemCount";
+import ItemList from "../ItemList/ItemList";
 
 function ItemListContainer(props) {
     return(
         <>
-            <h3>{props.greeting}</h3>
-            <ItemCount stock={10} initial={1} onAdd={(count) => {console.log("¡Agregado! Items: " + count)}}/>
+            <ItemList/>
         </>
     )
 }
+
 
 export default ItemListContainer

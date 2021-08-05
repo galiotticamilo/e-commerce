@@ -6,6 +6,7 @@
     background-color: #ffe4ec;
     padding: 0.5rem;
     border-radius: 0.5rem;
+    margin-top: 1rem;
 }
 
 .cantidad {
@@ -16,21 +17,22 @@
 }
 
 .contenedor {
-    width: 20rem;
+    width: 28.4rem;
 }
 
-.bc {
+.boton-carrito {
     padding: 0.8rem;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     width: 100%;
     border-style:hidden;
     border-radius: 0.5rem;
     color:white;
     cursor: pointer;
     background-color: #fa8fb1;
+    margin-bottom: 1rem;
 }
 
-.b {
+.botones {
     font-size: 1.5rem;
     width: 2rem;
     height: 2rem;
