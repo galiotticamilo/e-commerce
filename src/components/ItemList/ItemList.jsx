@@ -106,7 +106,7 @@ function ItemList() {
     const itemsCatalogue = () => {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
-                resolve(catalogue.map(catalogue => <Item key={catalogue.id} title={catalogue.title} price={catalogue.price} pictureUrl={catalogue.pictureUrl}/>));
+                resolve(catalogue.map(catalogue => <Item id={catalogue.id} key={catalogue.id} title={catalogue.title} price={catalogue.price} pictureUrl={catalogue.pictureUrl}/>));
             }, 2000);
         });
     }

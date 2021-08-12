@@ -1,15 +1,19 @@
 import React from "react";
 import "../Item/Item.css";
 import ItemCount from "../ItemCount/ItemCount";
+import {Link} from "react-router-dom"
 
-function Item( {title, price, pictureUrl} ) {
+function Item( {title, price, pictureUrl, id} ) {
     return(
         <>
             <div className="item">
                 <div style={{backgroundImage: `url(${pictureUrl})`}} className="img margin"></div>
                 <div className="title margin">{title}</div>
                 <div className="price margin">{price}</div>
-                <ItemCount stock={10} initial={0} onAdd={(count) => {console.log("¡Agregado! Items: " + count)}}/>
+                <Link to={`/item/${id}`}>
+                    <button>Comprar</button>
+                </Link>
+                {/*<ItemCount stock={10} initial={0} onAdd={(count) => {console.log("¡Agregado! Items: " + count)}}/>*/}
             </div>
         </>
     )
