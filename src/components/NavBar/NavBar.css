@@ -23,6 +23,9 @@
 
 .nombre {
     cursor:pointer;
+    color:white;
+    text-decoration: none;
+    padding: 2rem;
 }
 
 @media(max-width: 768px){

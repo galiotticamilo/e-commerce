@@ -7,12 +7,10 @@ function NavBar() {
     return (
         <>
             <div className="nav">
-                <Link to="/">
-                    <p className="nombre">Example</p>
-                </Link>
+                <Link className="nombre" to="/">Example</Link>
                 <div className="caja">
-                    <a href="#">Inicio</a>
-                    <Link to="/category/:categoryid">Catálogo</Link>
+                    <Link to="/category/:categoryid">Categorías</Link>
+                    <Link to="/">Catálogo</Link>
                     <Icon/>
                 </div>
             </div>
