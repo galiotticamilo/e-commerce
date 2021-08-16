@@ -1,4 +1,4 @@
-import ItemDetail from "../ItemDetail/ItemDetail";
+import ItemCategory from "../ItemCategory/ItemCategory";
 import React, {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
 import ajin01 from "../../img/ajin01.jpg";
@@ -14,7 +14,7 @@ import ajin10 from "../../img/ajin10.jpg";
 import ajin11 from "../../img/ajin11.jpg";
 import ajin12 from "../../img/ajin12.jpg";
 
-function ItemDetailContainer() {
+function ItemCategoryList() {
 
     const catalogue = [
         {
@@ -103,7 +103,7 @@ function ItemDetailContainer() {
         }
     ]
 
-    const {itemId} = useParams()
+    const {categoryId} = useParams()
 
     const productProps = () => {
         new Promise((resolve, reject) => {
@@ -111,20 +111,20 @@ function ItemDetailContainer() {
                 resolve(catalogue)
             }, 2000);
         }).then(result => {
-            const filter = result.filter(element => element.id === itemId)
+            const filter = result.filter(element => element.id % 2===0)
             setProductState(filter)
         });
     }
 
-    useEffect(productProps, [itemId])
+    useEffect(productProps, [categoryId])
 
     const [ProductState, setProductState] = useState()  
 
     return(
-        <>  
-            {ProductState && ProductState.map(element => <ItemDetail key={element.id} description={element.description} pictureUrl={element.pictureUrl} price={element.price} title={element.title} />)}
-        </>
+        <div className="contenedor-items">  
+            {ProductState && ProductState.map(element => <ItemCategory id={element.id} key={element.id} pictureUrl={element.pictureUrl} price={element.price} title={element.title} />)}
+        </div>
     )
 }
 
-export default ItemDetailContainer
+export default ItemCategoryList
