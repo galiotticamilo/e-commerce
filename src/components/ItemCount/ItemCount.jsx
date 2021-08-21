@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../ItemCount/ItemCount.css"
 
 function ItemCount( {stock, onAdd, initial} ) {
@@ -8,7 +8,6 @@ function ItemCount( {stock, onAdd, initial} ) {
     const incrementar = () => {
         if(count < stock) {
             setCount(count+1)
-            onAdd(count)
         }
     }
 
@@ -18,6 +17,10 @@ function ItemCount( {stock, onAdd, initial} ) {
         }
     }
 
+    useEffect(() => {
+        onAdd(count)
+    }, [count])
+
     return (
         <div className="contenedor">  
             <div className="contador">
@@ -25,8 +28,6 @@ function ItemCount( {stock, onAdd, initial} ) {
                 <div className="cantidad">{count}</div>
                 <button className="botones" onClick={incrementar}>+</button>
             </div>
-            
-            <button className="boton-carrito">Agregar al carrito</button>
         </div>
     )
 }

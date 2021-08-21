@@ -22,6 +22,10 @@ function App() {
             <NavBar/>
             <ItemDetailContainer/>
           </Route>
+          <Route exact path="/cart">
+            <NavBar/>
+            <h1>Cart</h1>
+          </Route>
         </Switch>
       </Router>
     </div>

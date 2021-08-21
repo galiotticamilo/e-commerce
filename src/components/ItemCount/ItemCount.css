@@ -1,5 +1,5 @@
 .contador {
-    width: 45%;
+    width: 25rem;
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -21,17 +21,6 @@
     display: flex;
 }
 
-.boton-carrito {
-    padding: 0.9rem;
-    width: 25rem;
-    border-style:hidden;
-    border-radius: 0.5rem;
-    color:white;
-    cursor: pointer;
-    background-color: #fa8fb1;
-    margin-left: 1.5rem;
-}
-
 .botones {
     font-size: 1.5rem;
     width: 2rem;
@@ -42,4 +31,6 @@
     background-color: #fa8fb1;
     cursor: pointer;
 }
+
+
 

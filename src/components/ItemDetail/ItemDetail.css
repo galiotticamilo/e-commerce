@@ -41,3 +41,30 @@
     margin-bottom: 1.5rem;
     
 }
+
+.boton-carrito {
+    padding: 0.9rem;
+    width: 25rem;
+    border-style:hidden;
+    border-radius: 0.5rem;
+    color:white;
+    cursor: pointer;
+    background-color: #fa8fb1;
+    margin-top: 1.5rem;
+}
+
+.boton-terminar {
+    padding: 0.9rem;
+    width: 25rem;
+    border-style:hidden;
+    border-radius: 0.5rem;
+    color:white;
+    cursor: pointer;
+    background-color: #50ee5d;
+    margin-left: 1.5rem;
+}
+
+.contenedor-terminar-compra {
+    display: flex;
+    align-items: center;
+}
