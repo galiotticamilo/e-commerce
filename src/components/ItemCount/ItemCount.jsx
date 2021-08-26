@@ -33,3 +33,4 @@ function ItemCount( {stock, onAdd, initial} ) {
 }
 
 export default ItemCount
+

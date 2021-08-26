@@ -122,7 +122,7 @@ function ItemDetailContainer() {
 
     return(
         <>  
-            {ProductState && ProductState.map(element => <ItemDetail key={element.id} description={element.description} pictureUrl={element.pictureUrl} price={element.price} title={element.title} />)}
+            {ProductState && ProductState.map(element => <ItemDetail key={element.id} objeto={element}/>)}
         </>
     )
 }
