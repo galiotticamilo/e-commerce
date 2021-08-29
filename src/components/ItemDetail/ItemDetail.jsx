@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom"
 import "../ItemDetail/ItemDetail.css"
 import ItemCount from "../ItemCount/ItemCount"
@@ -30,10 +30,10 @@ function ItemDetail( {objeto} ) {
                 <div className="informacion-detail">    
                     <div className="title-detail">{objeto.title}</div>
                     <div className="description-detail">{objeto.description}</div>
-                    <div className="price-detail">{objeto.price}</div>
+                    <div className="price-detail">${objeto.price}</div>
                     
                     {itemCountVisible && <ItemCount stock={10} initial={0} onAdd={onAdd}/>}
-                    {buyButtonVisibility && <button onClick={() => onAddToCart(objeto, itemsCount)} className="boton-carrito">Agregar al carrito</button>}
+                    {buyButtonVisibility && <button onClick={() => onAddToCart(objeto, itemsCount)} className="boton-carrito" disabled={itemsCount === 0}>Agregar al carrito</button>}
                     {!buyButtonVisibility && 
                     <div className="contenedor-terminar-compra">
                         <h1>x{itemsCount} Unidades</h1>

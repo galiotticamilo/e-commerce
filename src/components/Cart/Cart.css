@@ -1,0 +1,70 @@
+.contenedor-productos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70rem;
+}
+
+.contenedor-sumas {
+    width: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bloque-producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton-eliminar, .vaciar {
+    font-size: 1.6rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    width: 13rem;
+    border-style:hidden;
+    border-radius: 1.2rem;
+    color:#fa8fb1;
+    cursor: pointer;
+    background-color: #ffe4ec;
+    margin-bottom: 1.2rem;
+}
+
+.pagar {
+    font-size: 1.6rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    width: 13rem;
+    border-style:hidden;
+    border-radius: 1.2rem;
+    color:white;
+    cursor: pointer;
+    background-color: #fa8fb1;
+    margin-bottom: 1.2rem;
+}
+
+.contenedor-pagar-vaciar {
+    margin-top: 0.5rem;
+    width: 30rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.no-items {
+    font-size: 2rem;
+}
+
+.volver-tienda {
+    font-size: 1.6rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    width: 15rem;
+    border-style:hidden;
+    border-radius: 1.2rem;
+    color:white;
+    cursor: pointer;
+    background-color: #fa8fb1;
+    margin-bottom: 1.2rem;
+}

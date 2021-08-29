@@ -8,7 +8,7 @@ function Item( {title, price, pictureUrl, id} ) {
             <div className="item">
                 <div style={{backgroundImage: `url(${pictureUrl})`}} className="img margin"></div>
                 <div className="title margin">{title}</div>
-                <div className="price margin">{price}</div>
+                <div className="price margin">${price}</div>
                 <div className="contenedor-botones">
                     <Link to={`/item/${id}`}>
                         <button className="comprar">Comprar</button>

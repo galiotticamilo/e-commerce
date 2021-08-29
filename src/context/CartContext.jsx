@@ -8,36 +8,41 @@ export const CartProvider = props => {
 
     const [products, setProducts] = useState([])
 
-    const addItem = (product, cantidad) => {
-        if (isInCart(product)) {
-            products.map(prod => {
-                if (prod.id === product.id) {
+    useEffect(() => console.log('cambio context', products))
+
+    const addItem = (data, cantidad) => {
+        if (isInCart(data)) {
+            const itemNew = products.map(prod => {
+                if (prod.id === data.id) {
                     return prod.quantity += cantidad
                 }
             })
         } else {
             setProducts(state => {
-                return [...state, {...product, quantity: cantidad}]
+                return  [...state, {... data, quantity: cantidad}]
             })
         }
     }
 
-    // no lo hago porque no puedo ahcer nada ahre
-
-    function removeItem(event) {
-        
+    const removeItem = (product) => {
+        const dataFiltrada = products.filter((elem) => elem !== product)
+        setProducts(dataFiltrada)
+        console.log('se elimino --', products)
     }
 
     function clear() {
         setProducts([])
     }
 
-    function isInCart(product) {
-        products?.find(elem => elem.id === product.id)
+    function isInCart(data) {
+        products?.find(elem => elem.id === data.id)
     }
 
+    const totalItems = () => products.reduce((acum, items) => acum + items.quantity, 0)
+    const totalPrice = () => products.reduce((acum, items) => acum + (items.price * items.quantity), 0)
+
     return (
-        <CartContext.Provider value={{addItem, removeItem, clear, products}}>
+        <CartContext.Provider value={{addItem, removeItem, clear, products, totalItems, totalPrice}}>
             {props.children}
         </CartContext.Provider>
     )

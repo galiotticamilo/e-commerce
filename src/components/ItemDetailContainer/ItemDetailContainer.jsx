@@ -21,90 +21,90 @@ function ItemDetailContainer() {
             id: "1",
             title: "Ajin # 01",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus cumque atque minima quia eveniet, ad id, tempora iusto nulla, neque animi? Accusantium suscipit ipsum tempora! Animi porro labore dolorem in.",
-            price: "$495",
+            price: 495,
             pictureUrl: ajin01, 
         },
         {
             id: "2",
             title: "Ajin # 02",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus cumque atque minima quia eveniet, ad id, tempora iusto nulla, neque animi? Accusantium suscipit ipsum tempora! Animi porro labore dolorem in.",
-            price: "$495",
+            price: 495,
             pictureUrl: ajin02, 
         },
         {
             id: "3",
             title: "Ajin # 03",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus cumque atque minima quia eveniet, ad id, tempora iusto nulla, neque animi? Accusantium suscipit ipsum tempora! Animi porro labore dolorem in.",
-            price: "$495",
+            price: 495,
             pictureUrl: ajin03, 
         },
         {
             id: "4",
             title: "Ajin # 04",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus cumque atque minima quia eveniet, ad id, tempora iusto nulla, neque animi? Accusantium suscipit ipsum tempora! Animi porro labore dolorem in.",
-            price: "$495",
+            price: 495,
             pictureUrl: ajin04, 
         },
         {
             id: "5",
             title: "Ajin # 05",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus cumque atque minima quia eveniet, ad id, tempora iusto nulla, neque animi? Accusantium suscipit ipsum tempora! Animi porro labore dolorem in.",
-            price: "$495",
+            price: 495,
             pictureUrl: ajin05, 
         },
         {
             id: "6",
             title: "Ajin # 06",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus cumque atque minima quia eveniet, ad id, tempora iusto nulla, neque animi? Accusantium suscipit ipsum tempora! Animi porro labore dolorem in.",
-            price: "$495",
+            price: 495,
             pictureUrl: ajin06, 
         },
         {
             id: "7",
             title: "Ajin # 07",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus cumque atque minima quia eveniet, ad id, tempora iusto nulla, neque animi? Accusantium suscipit ipsum tempora! Animi porro labore dolorem in.",
-            price: "$495",
+            price: 495,
             pictureUrl: ajin07, 
         },
         {
             id: "8",
             title: "Ajin # 08",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus cumque atque minima quia eveniet, ad id, tempora iusto nulla, neque animi? Accusantium suscipit ipsum tempora! Animi porro labore dolorem in.",
-            price: "$495",
+            price: 495,
             pictureUrl: ajin08, 
         },
         {
             id: "9",
             title: "Ajin # 09",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus cumque atque minima quia eveniet, ad id, tempora iusto nulla, neque animi? Accusantium suscipit ipsum tempora! Animi porro labore dolorem in.",
-            price: "$495",
+            price: 495,
             pictureUrl: ajin09, 
         },
         {
             id: "10",
             title: "Ajin # 10",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus cumque atque minima quia eveniet, ad id, tempora iusto nulla, neque animi? Accusantium suscipit ipsum tempora! Animi porro labore dolorem in.",
-            price: "$495",
+            price: 495,
             pictureUrl: ajin10, 
         },
         {
             id: "11",
             title: "Ajin # 11",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus cumque atque minima quia eveniet, ad id, tempora iusto nulla, neque animi? Accusantium suscipit ipsum tempora! Animi porro labore dolorem in.",
-            price: "$495",
+            price: 495,
             pictureUrl: ajin11, 
         },
         {
             id: "12",
             title: "Ajin # 12",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus cumque atque minima quia eveniet, ad id, tempora iusto nulla, neque animi? Accusantium suscipit ipsum tempora! Animi porro labore dolorem in.",
-            price: "$495",
+            price: 495,
             pictureUrl: ajin12, 
         }
     ]
 
     const {itemId} = useParams()
-
+    
     const productProps = () => {
         new Promise((resolve, reject) => {
             setTimeout(() => {

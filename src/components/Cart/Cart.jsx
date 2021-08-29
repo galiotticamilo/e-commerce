@@ -1,0 +1,45 @@
+import React, {useEffect} from "react"
+import {Link} from "react-router-dom";
+import {useCart} from '../../context/CartContext'
+import "../Cart/Cart.css"
+
+function CartPrueba() {
+
+    const {removeItem, products, clear, totalItems, totalPrice} = useCart()
+
+    useEffect(() => console.log('cambio comp', products))
+    
+    return (
+        <div className="bloque-producto">
+            {products.length > 0 ?
+            <>
+                {products.map(elem => 
+                <>  
+                    <div className="contenedor-productos">
+                        <h1>{elem.title} - Cantidad: {elem.quantity} unidades</h1>
+                        <div className="contenedor-sumas">
+                            <h1>${elem.price * elem.quantity}</h1>
+                            <button className="boton-eliminar" onClick={() => removeItem(elem)}>Eliminar</button>
+                        </div>
+                    </div>
+                </>)}
+                <h1>Subtotal: ${totalPrice()} ({totalItems()} unidades)</h1>
+                <div className="contenedor-pagar-vaciar">
+                    <button className="pagar">Pagar</button>
+                    <button className="vaciar" onClick={() => clear(products.elem)}>Vaciar carrito</button>
+                </div>
+            </> : 
+                <>
+                    <h3 className="no-items">No hay productos en su carrito.</h3>
+
+                    <Link to="/">
+                        <button className="volver-tienda">Volver a la tienda</button>
+                    </Link>
+                </>
+            }   
+        </div>
+    )
+}
+
+
+export default CartPrueba

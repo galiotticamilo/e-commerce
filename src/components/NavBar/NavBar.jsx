@@ -15,7 +15,7 @@ function NavBar() {
                     
                     <Link to="/category/tomos-pares">Tomos pares</Link>
                     <Link to="/">Catálogo</Link>
-                    <Icon/>
+                    <Link to="/cart"><Icon/></Link>
                 </div>
             </div>
         </>
