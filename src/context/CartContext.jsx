@@ -12,7 +12,7 @@ export const CartProvider = props => {
 
     const addItem = (data, cantidad) => {
         if (isInCart(data)) {
-            const itemNew = products.map(prod => {
+            products.map(prod => {
                 if (prod.id === data.id) {
                     return prod.quantity += cantidad
                 }
@@ -34,8 +34,10 @@ export const CartProvider = props => {
         setProducts([])
     }
 
-    function isInCart(data) {
-        products?.find(elem => elem.id === data.id)
+    const isInCart = (data) => {
+        if (products?.find(elem => elem.id === data.id)) {
+            return true
+        }
     }
 
     const totalItems = () => products.reduce((acum, items) => acum + items.quantity, 0)
