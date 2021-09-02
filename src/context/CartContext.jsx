@@ -1,14 +1,11 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 export const CartContext = createContext()
-
 export const useCart = () => useContext(CartContext)
 
 export const CartProvider = props => {
 
     const [products, setProducts] = useState([])
-
-    useEffect(() => console.log('cambio context', products))
 
     const addItem = (data, cantidad) => {
         if (isInCart(data)) {
@@ -19,7 +16,7 @@ export const CartProvider = props => {
             })
         } else {
             setProducts(state => {
-                return  [...state, {... data, quantity: cantidad}]
+                return  [...state, {...data, quantity: cantidad}]
             })
         }
     }

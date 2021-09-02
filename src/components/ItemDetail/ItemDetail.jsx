@@ -6,7 +6,7 @@ import { useCart } from "../../context/CartContext"
 
 function ItemDetail( {objeto} ) {
 
-    const {addItem, products} = useCart()
+    const {addItem} = useCart()
 
     const [itemCountVisible, setItemCountVisible] = useState(true)
     const [buyButtonVisibility, setBuyButtonVisibility] = useState(true)
@@ -36,7 +36,6 @@ function ItemDetail( {objeto} ) {
                     {buyButtonVisibility && <button onClick={() => onAddToCart(objeto, itemsCount)} className="boton-carrito" disabled={itemsCount === 0}>Agregar al carrito</button>}
                     {!buyButtonVisibility && 
                     <div className="contenedor-terminar-compra">
-                        <h1>x{itemsCount} Unidades</h1>
                         <Link to="/cart">
                             <button className="boton-terminar">Terminar compra</button>
                         </Link>
