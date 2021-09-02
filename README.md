@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ##  ¡Bienvenido/a al repositorio oficial de mi proyecto de final de curso de Coderhouse: React Js!
 
 #### **Introducción**
@@ -15,3 +16,6 @@ Mi nombre es Camilo Galiotti, soy desarrollador web Front-end y actualmente estu
 
 ##### Contacto
 Perfil personal de [Linkedin](https://www.linkedin.com/in/camilo-javier-galiotti-8724b2214/ "Linkedin").
+=======
+
+>>>>>>> 08a8c574e349d0d6d273f0d45839f839a8d866e1
