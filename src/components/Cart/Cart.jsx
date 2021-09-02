@@ -22,7 +22,7 @@ function Cart() {
                         </div>
                     </>
                 )}
-                <h1>Subtotal: ${totalPrice} ({totalItems} unidades)</h1>
+                <h1>Subtotal: ${totalPrice()} ({totalItems()} unidades)</h1>
                 <div className="contenedor-pagar-vaciar">
                     <button className="pagar" onClick={purchaseItems}>Pagar</button>
                     <button className="vaciar" onClick={clear}>Vaciar carrito</button>
