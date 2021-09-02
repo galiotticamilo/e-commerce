@@ -12,12 +12,12 @@ export default function ItemDetailContainer() {
     useEffect(() => {
         Firebase.get(`catalogue/${itemId}`).then(res => {
             const item = res.data();
-        setItemDom(
-        <ItemDetail
-            id={res.id}
-            objeto={item}
-        />
-        );
+            setItemDom(
+                <ItemDetail
+                    id={res.id}
+                    objeto={item}
+                />
+            );
         });
     }, []);
 

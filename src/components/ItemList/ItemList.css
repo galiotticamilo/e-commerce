@@ -2,8 +2,29 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     place-items: center;
-    width: 71vw;
+    width: 137rem;
     margin: 0 auto;
+}
+
+@media(max-width: 1366px){
+    .contenedor-items {
+        grid-template-columns: repeat(3, 1fr);
+        width: 102rem;
+    }
+}
+
+@media(max-width: 768px){
+    .contenedor-items {
+        grid-template-columns: repeat(2, 1fr);
+        width: 68rem;
+    }
+}
+
+@media(max-width: 540px){
+    .contenedor-items {
+        grid-template-columns: repeat(1, 1fr);
+        width: 30rem;
+    }
 }
 
 .margin {

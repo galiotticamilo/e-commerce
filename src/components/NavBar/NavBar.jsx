@@ -12,10 +12,9 @@ function NavBar() {
             <div className="nav">
                 <Link className="nombre" to="/">Example</Link>
                 <div className="caja">
-                    
-                    <Link to="/category/tomos-pares">Tomos pares</Link>
-                    <Link to="/">Catálogo</Link>
-                    <Link to="/cart"><Icon/></Link>
+                    <Link className="catalogo" to="/">Catálogo</Link>
+                    <Link className="tomos-pares" to="/category/tomos-pares">Tomos pares</Link>
+                    <Link className="icon-cart" to="/cart"><Icon/></Link>
                 </div>
             </div>
         </>

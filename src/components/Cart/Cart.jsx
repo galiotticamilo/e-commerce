@@ -5,27 +5,27 @@ import "../Cart/Cart.css"
 
 function Cart() {
 
-    const {removeItem, products, clear, totalItems, totalPrice} = useCart()
+    const {removeItem, products, clear, totalItems, totalPrice, purchaseItems} = useCart()
 
     return (
         <div className="bloque-producto">
             {products.length > 0 ?
             <>
                 {products.map(elem =>
-                <>  
-                    <div className="contenedor-productos">
-                        <h1>{elem.title} - Cantidad: {elem.quantity} unidades</h1>
-                        <div className="contenedor-sumas">
-                            <h1>${elem.price * elem.quantity}</h1>
-                            <button className="boton-eliminar" onClick={() => removeItem(elem)}>Eliminar</button>
+                    <>  
+                        <div className="contenedor-productos">
+                            <h1>{elem.title} - Cantidad: {elem.quantity} unidades</h1>
+                            <div className="contenedor-sumas">
+                                <h1>${elem.price * elem.quantity}</h1>
+                                <button className="boton-eliminar" onClick={() => removeItem(elem)}>Eliminar</button>
+                            </div>
                         </div>
-                    </div>
-                </>
+                    </>
                 )}
-                <h1>Subtotal: ${totalPrice()} ({totalItems()} unidades)</h1>
+                <h1>Subtotal: ${totalPrice} ({totalItems} unidades)</h1>
                 <div className="contenedor-pagar-vaciar">
-                    <button className="pagar">Pagar</button>
-                    <button className="vaciar" onClick={() => clear(products.elem)}>Vaciar carrito</button>
+                    <button className="pagar" onClick={purchaseItems}>Pagar</button>
+                    <button className="vaciar" onClick={clear}>Vaciar carrito</button>
                 </div>
             </> : 
                 <>

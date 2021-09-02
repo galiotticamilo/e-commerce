@@ -40,8 +40,32 @@ export const CartProvider = props => {
     const totalItems = () => products.reduce((acum, items) => acum + items.quantity, 0)
     const totalPrice = () => products.reduce((acum, items) => acum + (items.price * items.quantity), 0)
 
+    const newOrder = {
+        buyer: {
+            name: "Camilo Galiotti",
+            phone: "+54 9 3413 92 8839",
+            email: "camilogaliotti1@gmail.com"
+        },
+        items: [products],
+        date: new Date().toString(),
+        totalPrice: totalPrice()
+    }
+
+    function purchaseItems() {
+        console.log(newOrder)
+    }
+
     return (
-        <CartContext.Provider value={{addItem, removeItem, clear, products, totalItems, totalPrice}}>
+        <CartContext.Provider value={{
+            addItem,
+            removeItem,
+            clear,
+            products,
+            totalItems,
+            totalPrice,
+            purchaseItems,
+            }}
+            >
             {props.children}
         </CartContext.Provider>
     )

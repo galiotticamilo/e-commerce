@@ -1,6 +1,5 @@
 .nav {
     font-size: 2rem;
-    color: white;
     width: 100%;
     background-color: #FC6998;
     display:flex;
@@ -18,7 +17,6 @@
 .caja a {
     margin-right: 2rem;
     text-decoration: none;
-    color: white;
 }
 
 .nombre {
@@ -30,6 +28,24 @@
 
 @media(max-width: 768px){
     .caja {
-    width: 28vh;
+    width: 30rem;
     }
+}
+
+@media(max-width: 500px){
+    .caja {
+    width: 23rem;
+    }
+}
+
+.tomos-pares, .icon-cart, .catalogo {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    transition: 0.5s;
+}
+
+.tomos-pares:hover,
+.icon-cart:hover,
+.catalogo:hover {
+    color: rgba(255, 255, 255, 1);
 }

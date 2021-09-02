@@ -30,6 +30,13 @@
     cursor: pointer;
     background-color: #ffe4ec;
     margin-bottom: 1.2rem;
+    transition: 0.5s;
+}
+
+.boton-eliminar:hover,
+.vaciar:hover {
+    background-color: white;
+    color: black;
 }
 
 .pagar {
@@ -41,8 +48,13 @@
     border-radius: 1.2rem;
     color:white;
     cursor: pointer;
-    background-color: #fa8fb1;
+    background-color: rgba(250, 143, 177, 0.8);
+    transition: 0.5s;
     margin-bottom: 1.2rem;
+}
+
+.pagar:hover {
+    background-color: rgba(250, 143, 177, 1);
 }
 
 .contenedor-pagar-vaciar {
@@ -65,6 +77,18 @@
     border-radius: 1.2rem;
     color:white;
     cursor: pointer;
-    background-color: #fa8fb1;
+    background-color: rgba(250, 143, 177, 0.8);
+    transition: 0.5s;
     margin-bottom: 1.2rem;
+}
+
+.volver-tienda:hover {
+    background-color: rgba(250, 143, 177, 1);
+}
+
+@media(max-width: 600px){
+    .contenedor-productos{
+        display: flex;
+        flex-direction: column;
+    }
 }

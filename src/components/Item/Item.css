@@ -37,9 +37,15 @@
     border-radius: 1.2rem;
     color:white;
     cursor: pointer;
-    background-color: #fa8fb1;
+    background-color: rgba(250, 143, 177, 0.8);
     margin-bottom: 1.2rem;
+    transition: 0.5s;
 }
+
+.comprar:hover {
+    background-color: rgba(250, 143, 177, 1)
+}
+
 
 .ver-mas {
     font-size: 1.6rem;
@@ -52,6 +58,12 @@
     cursor: pointer;
     background-color: #ffe4ec;
     margin-bottom: 1.2rem;
+    transition: 0.5s;
+}
+
+.ver-mas:hover{
+    background-color: white;
+    color: black;
 }
 .contenedor-botones {
     display: flex;
