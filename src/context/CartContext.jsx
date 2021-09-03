@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from "react";
+import { v4 as uuidv4 } from 'uuid';
 
 export const CartContext = createContext()
 export const useCart = () => useContext(CartContext)
@@ -14,6 +15,8 @@ export const CartProvider = props => {
                     return prod.quantity += cantidad
                 }
             })
+
+            
         } else {
             setProducts(state => {
                 return  [...state, {...data, quantity: cantidad}]
@@ -24,7 +27,6 @@ export const CartProvider = props => {
     const removeItem = (product) => {
         const dataFiltrada = products.filter((elem) => elem !== product)
         setProducts(dataFiltrada)
-        console.log('se elimino --', products)
     }
 
     function clear() {
@@ -39,7 +41,7 @@ export const CartProvider = props => {
 
     const totalItems = () => products.reduce((acum, items) => acum + items.quantity, 0)
     const totalPrice = () => products.reduce((acum, items) => acum + (items.price * items.quantity), 0)
-
+    
     const newOrder = {
         buyer: {
             name: "Camilo Galiotti",
@@ -48,11 +50,15 @@ export const CartProvider = props => {
         },
         items: [products],
         date: new Date().toString(),
-        totalPrice: totalPrice()
+        totalItems: totalItems(),
+        totalPrice: totalPrice(),
+        IDOrder: uuidv4(),
     }
 
+    const [orderState, setOrderState] = useState()
+
     function purchaseItems() {
-        console.log(newOrder)
+        setOrderState(newOrder)
     }
 
     return (
@@ -64,6 +70,7 @@ export const CartProvider = props => {
             totalItems,
             totalPrice,
             purchaseItems,
+            orderState
             }}
             >
             {props.children}
