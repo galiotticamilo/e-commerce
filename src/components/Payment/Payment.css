@@ -1,0 +1,42 @@
+.payment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor-payment {
+    margin: 1.5rem 3rem;
+}
+
+.id-fecha {
+    font-size: 1.9rem;
+}
+
+.pago-realizado {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.detalle {
+    font-size: 2.7rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hijos-detalle-orden {
+    font-size: 2rem;
+}
+
+.comprador {
+    font-size: 1.8rem;
+}
+
+.subtotal {
+    margin-top: 1rem;
+}
+
+.margin-top {
+    margin-top: 1.5rem;
+}

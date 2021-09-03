@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState} from "react"
 import {Link} from "react-router-dom";
 import {useCart} from '../../context/CartContext'
 import "../Cart/Cart.css"
@@ -14,7 +14,7 @@ function Cart() {
                 {products.map(elem =>
                     <>  
                         <div className="contenedor-productos">
-                            <h1>{elem.title} - Cantidad: {elem.quantity} unidades</h1>
+                            <h1>{elem.title} | ${elem.price} - Cantidad: {elem.quantity} unidades</h1>
                             <div className="contenedor-sumas">
                                 <h1>${elem.price * elem.quantity}</h1>
                                 <button className="boton-eliminar" onClick={() => removeItem(elem)}>Eliminar</button>
@@ -22,9 +22,12 @@ function Cart() {
                         </div>
                     </>
                 )}
+
                 <h1>Subtotal: ${totalPrice()} ({totalItems()} unidades)</h1>
                 <div className="contenedor-pagar-vaciar">
-                    <button className="pagar" onClick={purchaseItems}>Pagar</button>
+                    <Link to="/cart/payment">
+                        <button className="pagar" onClick={() => purchaseItems()}>Pagar</button>
+                    </Link>
                     <button className="vaciar" onClick={clear}>Vaciar carrito</button>
                 </div>
             </> : 

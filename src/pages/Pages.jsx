@@ -5,6 +5,7 @@ import ItemDetailContainer from "../components/ItemDetailContainer/ItemDetailCon
 import ItemCategoryList from "../components/ItemCategoryList/ItemCategoryList";
 import {CartProvider} from "../context/CartContext";
 import Cart from '../components/Cart/Cart'
+import Payment from "../components/Payment/Payment"
 
 function Pages() {
     return(
@@ -26,6 +27,10 @@ function Pages() {
                     <Route exact path="/cart">
                         <NavBar/>
                         <Cart/>
+                    </Route>
+                    <Route exact path="/cart/payment">
+                        <NavBar/>
+                        <Payment/>
                     </Route>
                 </Switch>
             </Router>

@@ -38,14 +38,15 @@
     }
 }
 
-.tomos-pares, .icon-cart, .catalogo {
+.tomos-pares, .icon-cart, .catalogo, .nombre {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.7);
     transition: 0.5s;
 }
 
 .tomos-pares:hover,
 .icon-cart:hover,
-.catalogo:hover {
+.catalogo:hover,
+.nombre:hover {
     color: rgba(255, 255, 255, 1);
 }
