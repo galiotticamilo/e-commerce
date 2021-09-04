@@ -39,28 +39,11 @@
     color: black;
 }
 
-.pagar {
-    font-size: 1.6rem;
-    padding: 1rem;
-    margin-top: 1rem;
-    width: 13rem;
-    border-style:hidden;
-    border-radius: 1.2rem;
-    color:white;
-    cursor: pointer;
-    background-color: rgba(250, 143, 177, 0.8);
-    transition: 0.5s;
-    margin-bottom: 1.2rem;
-}
-
-.pagar:hover {
-    background-color: rgba(250, 143, 177, 1);
-}
-
 .contenedor-pagar-vaciar {
     margin-top: 0.5rem;
     width: 30rem;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
@@ -84,6 +67,10 @@
 
 .volver-tienda:hover {
     background-color: rgba(250, 143, 177, 1);
+}
+
+.vaciar {
+    margin-bottom: 2.5rem;
 }
 
 @media(max-width: 600px){

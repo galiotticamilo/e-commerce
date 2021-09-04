@@ -1,11 +1,12 @@
-import React, {useState} from "react"
+import React from "react"
 import {Link} from "react-router-dom";
 import {useCart} from '../../context/CartContext'
 import "../Cart/Cart.css"
+import OrderForm from "../OrderForm/OrderForm"
 
 function Cart() {
 
-    const {removeItem, products, clear, totalItems, totalPrice, purchaseItems} = useCart()
+    const {removeItem, products, clear, totalItems, totalPrice} = useCart()
 
     return (
         <div className="bloque-producto">
@@ -22,13 +23,11 @@ function Cart() {
                         </div>
                     </>
                 )}
-
                 <h1>Subtotal: ${totalPrice()} ({totalItems()} unidades)</h1>
+                <button className="vaciar" onClick={clear}>Vaciar carrito</button>
+                <div className="campo">Ingrese sus datos para proceder al pago.</div>
                 <div className="contenedor-pagar-vaciar">
-                    <Link to="/cart/payment">
-                        <button className="pagar" onClick={() => purchaseItems()}>Pagar</button>
-                    </Link>
-                    <button className="vaciar" onClick={clear}>Vaciar carrito</button>
+                    <OrderForm/>
                 </div>
             </> : 
                 <>

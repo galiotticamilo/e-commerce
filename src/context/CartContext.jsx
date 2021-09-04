@@ -29,10 +29,6 @@ export const CartProvider = props => {
         setProducts(dataFiltrada)
     }
 
-    function clear() {
-        setProducts([])
-    }
-
     const isInCart = (data) => {
         if (products?.find(elem => elem.id === data.id)) {
             return true
@@ -43,11 +39,6 @@ export const CartProvider = props => {
     const totalPrice = () => products.reduce((acum, items) => acum + (items.price * items.quantity), 0)
     
     const newOrder = {
-        buyer: {
-            name: "Camilo Galiotti",
-            phone: "+54 9 3413 92 8839",
-            email: "camilogaliotti1@gmail.com"
-        },
         items: [products],
         date: new Date().toString(),
         totalItems: totalItems(),
@@ -55,10 +46,35 @@ export const CartProvider = props => {
         IDOrder: uuidv4(),
     }
 
-    const [orderState, setOrderState] = useState()
+    const [orderState, setOrderState] = useState({
+        ...newOrder,
+        name: "",
+        email: "",
+        emailConfirm: "",
+        phone: ""
+    })
 
-    function purchaseItems() {
-        setOrderState(newOrder)
+    const updateDatos = (event) => {
+        event.preventDefault()
+        setOrderState({
+            ...orderState,
+            ...newOrder,
+            [event.target.name] : event.target.value
+        })    
+    }
+
+    const enviarDatos = (event) => {
+        event.preventDefault();
+    }
+
+    function clear() {
+        setProducts([])
+        setOrderState({...newOrder,
+            name: "",
+            email: "",
+            emailConfirm: "",
+            phone: ""
+        })
     }
 
     return (
@@ -69,8 +85,9 @@ export const CartProvider = props => {
             products,
             totalItems,
             totalPrice,
-            purchaseItems,
-            orderState
+            updateDatos,
+            enviarDatos,
+            orderState,
             }}
             >
             {props.children}
