@@ -91,11 +91,6 @@ function OrderForm() {
                 Todos los campos son obligatorios.
             </div>}
 
-            {emailConfirmVisibility &&
-            <div className="campo">
-                Los emails deben coincidir.    
-            </div>}
-
             <Link to="/cart/payment">    
                 {ButtonVisibility &&
                 <button
