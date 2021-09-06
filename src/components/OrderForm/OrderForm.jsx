@@ -9,7 +9,6 @@ function OrderForm() {
     const [ButtonVisibility, setButtonVisibility] = useState(false)
     const [confirmVisibility, setConfirmVisibility] = useState(true)
     const [placeRequiredVisibility, setPlaceRequiredVisibility] = useState(false)
-    const [emailConfirmVisibility, setEmailConfirmVisilibty] = useState(false)
 
     const confirm = () => {
         if(
