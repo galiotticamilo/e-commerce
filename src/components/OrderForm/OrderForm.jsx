@@ -8,21 +8,26 @@ function OrderForm() {
     const { updateDatos, enviarDatos, orderState } = useCart()
     const [ButtonVisibility, setButtonVisibility] = useState(false)
     const [confirmVisibility, setConfirmVisibility] = useState(true)
+    const [placeRequiredVisibility, setPlaceRequiredVisibility] = useState(false)
+    const [emailConfirmVisibility, setEmailConfirmVisilibty] = useState(false)
 
     const confirm = () => {
         if(
             orderState.name !== "" &&
-            orderState.phone !== "" && 
-            orderState.email !== "" && 
-            orderState.email === orderState.emailConfirm
+            orderState.phone !== "" &&
+            orderState.email !== "" &&
+            orderState.email == orderState.emailConfirm
             ){
             setButtonVisibility(true)
             setConfirmVisibility(false)
+            setPlaceRequiredVisibility(false)
+        } else {
+            setPlaceRequiredVisibility(true)
         }
     }
 
     return(
-        <>          
+        <div className="contenedor-form">          
             <div className="contenedor-input">
                 <div className="input-data">
                     <label className="label-form">Nombre</label>
@@ -30,7 +35,9 @@ function OrderForm() {
                         type="text" 
                         onChange={(event) => updateDatos(event)} 
                         name="name"
-                        className="input-form"/>
+                        className="input-form"
+                        disabled={ButtonVisibility}
+                        />
                 </div> 
             </div>
 
@@ -41,7 +48,9 @@ function OrderForm() {
                         type="text" 
                         onChange={(event) => updateDatos(event)} 
                         name="phone"
-                        className="input-form"/>
+                        className="input-form"
+                        disabled={ButtonVisibility}
+                        />
                 </div>
             </div> 
 
@@ -49,10 +58,12 @@ function OrderForm() {
                 <div className="input-data">
                     <label className="label-form">Email</label>
                     <input 
-                        type="text" 
+                        type="email"
                         onChange={(event) => updateDatos(event)} 
                         name="email"
-                        className="input-form"/>
+                        className="input-form"
+                        disabled={ButtonVisibility}
+                        />
                 </div>
             </div>
 
@@ -60,30 +71,41 @@ function OrderForm() {
                 <div className="input-data">
                     <label className="label-form">Confirmar email</label>
                     <input
-                        type="text" 
+                        type="text"
                         onChange={(event) => updateDatos(event)} 
                         name="emailConfirm"
-                        className="input-form"/>
+                        className="input-form"
+                        disabled={ButtonVisibility}
+                        />
                 </div>
             </div>
 
             {confirmVisibility && 
-            <button 
+            <button
                 onClick={confirm}
-                className="confirmar-datos-pagar">Confirmar datos
+                className="confirmar-datos-pagar">
+                Confirmar datos
             </button>}
 
-            {!ButtonVisibility && <div className="campo">Todos los campos son obligatorios.</div>}
+            {placeRequiredVisibility && 
+            <div className="campo">
+                Todos los campos son obligatorios.
+            </div>}
+
+            {emailConfirmVisibility &&
+            <div className="campo">
+                Los emails deben coincidir.    
+            </div>}
 
             <Link to="/cart/payment">    
                 {ButtonVisibility &&
-                <button 
+                <button
                 onSubmit={(event)=>enviarDatos(event)} 
                 className="confirmar-datos-pagar green" 
                 type="submit">Confirmar pago
                 </button>}
             </Link>
-        </>
+        </div>
     )
 }
 

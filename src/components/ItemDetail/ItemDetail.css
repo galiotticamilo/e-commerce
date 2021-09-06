@@ -53,9 +53,21 @@
     transition: 0.5s;
 } 
 
-.boton-carrito:hover {
+.boton-carrito:hover, .volver-tienda-detail:hover {
     background-color: rgba(250, 143, 177, 1);
 }
+
+.volver-tienda-detail {
+    padding: 0.9rem;
+    width: 25rem;
+    border-style:hidden;
+    border-radius: 0.5rem;
+    color: white;
+    cursor: pointer;
+    background-color: rgba(250, 143, 177, 0.8);
+    transition: 0.7s;
+}
+
 
 .boton-terminar {
     padding: 0.9rem;
@@ -64,8 +76,9 @@
     border-radius: 0.5rem;
     color: white;
     cursor: pointer;
-    background-color: rgba(250, 143, 177, 1);
+    background-color: rgba(250, 143, 177, 0.8);
     transition: 0.7s;
+    margin-bottom: 1rem;
 }
 
 .boton-terminar:hover {
@@ -75,7 +88,8 @@
 
 .contenedor-terminar-compra {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    
 }
 
 @media(max-width: 600px){
@@ -111,4 +125,6 @@
         height: 36rem;
     }
 }
+
+
 

@@ -39,7 +39,11 @@ function ItemDetail( {objeto} ) {
                         <Link to="/cart">
                             <button className="boton-terminar">Terminar compra</button>
                         </Link>
-                    </div>} 
+                        <Link to="/">
+                            <button className="volver-tienda-detail">Volver a la tienda</button>
+                        </Link>
+                    </div>
+                    } 
                 </div>
             </div>
         </div>
