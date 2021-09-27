@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/galiotticamilo/e-commerce/static/css/main.f02ad7c7.chunk.css",
+    "main.js": "/galiotticamilo/e-commerce/static/js/main.bac34a49.chunk.js",
+    "main.js.map": "/galiotticamilo/e-commerce/static/js/main.bac34a49.chunk.js.map",
+    "runtime-main.js": "/galiotticamilo/e-commerce/static/js/runtime-main.f5c246f7.js",
+    "runtime-main.js.map": "/galiotticamilo/e-commerce/static/js/runtime-main.f5c246f7.js.map",
+    "static/js/2.dec6d3b4.chunk.js": "/galiotticamilo/e-commerce/static/js/2.dec6d3b4.chunk.js",
+    "static/js/2.dec6d3b4.chunk.js.map": "/galiotticamilo/e-commerce/static/js/2.dec6d3b4.chunk.js.map",
+    "static/js/3.a2cda505.chunk.js": "/galiotticamilo/e-commerce/static/js/3.a2cda505.chunk.js",
+    "static/js/3.a2cda505.chunk.js.map": "/galiotticamilo/e-commerce/static/js/3.a2cda505.chunk.js.map",
+    "index.html": "/galiotticamilo/e-commerce/index.html",
+    "static/css/main.f02ad7c7.chunk.css.map": "/galiotticamilo/e-commerce/static/css/main.f02ad7c7.chunk.css.map",
+    "static/js/2.dec6d3b4.chunk.js.LICENSE.txt": "/galiotticamilo/e-commerce/static/js/2.dec6d3b4.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f5c246f7.js",
+    "static/js/2.dec6d3b4.chunk.js",
+    "static/css/main.f02ad7c7.chunk.css",
+    "static/js/main.bac34a49.chunk.js"
+  ]
+}
