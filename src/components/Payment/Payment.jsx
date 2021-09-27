@@ -31,7 +31,7 @@ function Payment() {
                 <div className="comprador">{orderState.email}</div>  
             </div>
             <Link to="/">
-                        <button onClick={clear} className="volver-tienda margin-top">Volver a la tienda</button>
+                <button className="volver-tienda margin-top" onClick={clear}>Volver a la tienda</button>
             </Link>
         </div>
     )

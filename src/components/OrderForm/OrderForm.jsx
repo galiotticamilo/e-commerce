@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useEffect, useState} from "react"
 import { useCart } from "../../context/CartContext"
 import { Link } from "react-router-dom"
 import "../OrderForm/OrderForm.css"
@@ -10,11 +10,23 @@ function OrderForm() {
     const [confirmVisibility, setConfirmVisibility] = useState(true)
     const [placeRequiredVisibility, setPlaceRequiredVisibility] = useState(false)
 
+    const validPhone = (phone) => {
+        var expReg= /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+        var isValid = expReg.test(phone);
+        return (isValid);
+    }
+
+    const validEmail = (email) => {
+        var expReg= /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+        var isValid = expReg.test(email);     
+        return (isValid); 
+    }
+
     const confirm = () => {
         if(
             orderState.name !== "" &&
-            orderState.phone !== "" &&
-            orderState.email !== "" &&
+            validPhone(orderState.phone) &&
+            validEmail(orderState.email) &&
             orderState.email == orderState.emailConfirm
             ){
             setButtonVisibility(true)

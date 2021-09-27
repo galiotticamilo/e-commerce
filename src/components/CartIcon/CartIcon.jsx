@@ -1,7 +1,7 @@
 import * as React from "react"
-import "../Icon/Icon.css"
+import "./CartIcon.css"
 
-function SvgComponent(props) {
+function CartIcon(props) {
     return (
         <svg
             className="icon"
@@ -14,4 +14,4 @@ function SvgComponent(props) {
     )
 }
 
-export default SvgComponent
+export default CartIcon

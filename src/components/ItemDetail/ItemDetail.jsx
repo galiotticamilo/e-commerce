@@ -24,9 +24,9 @@ function ItemDetail( {objeto} ) {
     }
 
     return(
-        <div className="div">
+        <div className="return-item-detail">
             <div className="container-detail">
-                <div style={{backgroundImage: `url(${objeto.pictureUrl})`}} className="img-detail"></div>   
+                <img src={objeto.pictureUrl} className="img-detail"/>   
                 <div className="informacion-detail">    
                     <div className="title-detail">{objeto.title}</div>
                     <div className="description-detail">{objeto.description}</div>

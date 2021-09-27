@@ -7,7 +7,7 @@ function Item( {title, price, pictureUrl, id} ) {
         <>
             <div className="item">
                 <Link to={`/item/${id}`}>
-                    <div style={{backgroundImage: `url(${pictureUrl})`}} className="img margin"></div>
+                    <img src={pictureUrl} className="img"/>  
                 </Link>
                 <div className="title margin">{title}</div>
                 <div className="price margin">${price}</div>
@@ -16,9 +16,9 @@ function Item( {title, price, pictureUrl, id} ) {
                         <button className="comprar">Comprar</button>
                     </Link>
                     
-                    <a target="_blank" href="http://www.editorialivrea.com/ARG/ajin/">
+                    <Link to={`/item/${id}`}>
                         <button className="ver-mas">Ver más</button>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </>

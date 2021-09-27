@@ -52,11 +52,11 @@
 }
 
 .volver-tienda {
-    font-size: 1.6rem;
     padding: 1rem;
+    font-size: 1.6rem;
     margin-top: 1rem;
     width: 15rem;
-    border-style:hidden;
+    border-style: hidden;
     border-radius: 1.2rem;
     color:white;
     cursor: pointer;

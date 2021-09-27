@@ -1,4 +1,4 @@
-import ItemCategory from "../ItemCategory/ItemCategory";
+import Item from "../Item/Item";
 import React, {useEffect, useState} from "react";
 import { Firebase } from "../../firebase/index";
 
@@ -10,12 +10,12 @@ function ItemCategoryList() {
         Firebase.getAll('catalogue', {
             field: "category",
             condition: "==",
-            value: "par"}).then(docs => {
+            value: "another"}).then(docs => {
                 const arr = [];
                 docs.forEach(item => {
                 const data = item.data();
                 arr.push(
-                    <ItemCategory
+                    <Item
                     key={item.id}
                     id={item.id}
                     title={data.title}
@@ -29,9 +29,9 @@ function ItemCategoryList() {
     }, []);
 
     return(
-        <div className="contenedor-items">  
+        <section className="contenedor-items">  
             {itemsCategory}
-        </div>
+        </section>
     )
 }
 

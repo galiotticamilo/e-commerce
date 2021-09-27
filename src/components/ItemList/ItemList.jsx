@@ -27,11 +27,11 @@ function ItemList() {
     }, []);
 
     return(
-        <>
+        <section>
             <div className="contenedor-items">
                 {items}
             </div>
-        </>
+        </section>
     )
 }
 

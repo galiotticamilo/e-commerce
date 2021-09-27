@@ -30,9 +30,7 @@ export const CartProvider = props => {
     }
 
     const isInCart = (data) => {
-        if (products?.find(elem => elem.id === data.id)) {
-            return true
-        }
+        return (products?.find(elem => elem.id === data.id) != null)
     }
 
     const totalItems = () => products.reduce((acum, items) => acum + items.quantity, 0)
@@ -69,11 +67,12 @@ export const CartProvider = props => {
 
     function clear() {
         setProducts([])
-        setOrderState({...newOrder,
-            name: "",
-            email: "",
-            emailConfirm: "",
-            phone: ""
+        setOrderState({
+            ...newOrder,
+        name: "",
+        email: "",
+        emailConfirm: "",
+        phone: ""
         })
     }
 

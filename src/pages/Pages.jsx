@@ -11,25 +11,21 @@ function Pages() {
     return(
         <CartProvider>
             <Router>
+                <NavBar/>
                 <Switch>  
                     <Route exact path="/">
-                        <NavBar/>
                         <ItemListContainer/>
                     </Route>
                     <Route exact path="/category/:id">
-                        <NavBar/>
                         <ItemCategoryList/>
                     </Route>
                     <Route exact path="/item/:itemId">
-                        <NavBar/>
                         <ItemDetailContainer/>
                     </Route>
                     <Route exact path="/cart">
-                        <NavBar/>
                         <Cart/>
                     </Route>
                     <Route exact path="/cart/payment">
-                        <NavBar/>
                         <Payment/>
                     </Route>
                 </Switch>
